@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.Racarmona_PruebaSpringJPA_jar_0.0.1PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Administrador</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Editorial</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Autor</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Libro</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Caja</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Abastecimiento</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Cliente</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Venta</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.DetalleVenta</class>
+    <class>com.Racarmona.PruebaSpringJPA.Modelo.Rol</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://www.liralecturainteligente.com:3306/libreriaunicesar?ServerTimeZone=UTC"/>
+      <property name="javax.persistence.jdbc.user" value="ricardo"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="12345"/>
+    </properties>
+  </persistence-unit>
+</persistence>

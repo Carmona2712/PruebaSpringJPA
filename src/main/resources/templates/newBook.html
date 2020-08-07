@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="loading" lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+    <!-- BEGIN: Head-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+                    <meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+                        <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
+                            <meta name="author" content="PIXINVENT">
+                                <title>Form Layouts - Frest - Bootstrap HTML admin template</title>
+                                <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
+                                    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+                                        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+
+                                            <!-- BEGIN: Vendor CSS-->
+                                            <link rel="stylesheet" type="text/css" th:ref="@{/app-assets/vendors/css/vendors.min.css}" href="../../../app-assets/vendors/css/vendors.min.css">
+                                                <!-- END: Vendor CSS-->
+
+                                                <!-- BEGIN: Theme CSS-->
+                                                <link rel="stylesheet" type="text/css" th:ref="@{/app-assets/css/bootstrap.css}" href="../../../app-assets/css/bootstrap.css">
+                                                    <link rel="stylesheet" type="text/css" th:ref="@{/app-assets/css/bootstrap-extended.css}" href="../../../app-assets/css/bootstrap-extended.css">
+                                                        <link rel="stylesheet" type="text/css" th:ref="@{/app-assets/css/colors.css}" href="../../../app-assets/css/colors.css">
+                                                            <link rel="stylesheet" type="text/css" th:ref="@{/app-assets/css/components.css}" href="../../../app-assets/css/components.css">
+                                                                <link rel="stylesheet" type="text/css" th:ref="@{/app-assets/css/themes/dark-layout.css}" href="../../../app-assets/css/themes/dark-layout.css">
+                                                                    <link rel="stylesheet" type="text/css" th:ref="@{/app-assets/css/themes/semi-dark-layout.css}" href="../../../app-assets/css/themes/semi-dark-layout.css">
+                                                                        <!-- END: Theme CSS-->
+
+                                                                        <!-- BEGIN: Page CSS-->
+                                                                        <link rel="stylesheet" type="text/css" th:ref="@{/app-assets/css/core/menu/menu-types/horizontal-menu.css}" href="../../../app-assets/css/core/menu/menu-types/horizontal-menu.css">
+                                                                            <!-- END: Page CSS-->
+
+                                                                            <!-- BEGIN: Custom CSS-->
+                                                                            <link rel="stylesheet" th:ref="@{/assets/css/style.css}" type="text/css" href="../../../assets/css/style.css">
+                                                                                <!-- END: Custom CSS-->
+
+                                                                                </head>
+                                                                                <!-- END: Head-->
+
+                                                                                <!-- BEGIN: Body-->
+
+                                                                                <body class="horizontal-layout horizontal-menu navbar-sticky 2-columns   footer-static  " data-open="hover" data-menu="horizontal-menu" data-col="2-columns">
+
+                                                                                    <!-- BEGIN: Header-->
+                                                                                    <nav th:insert="Fragmentos/Generales/Admin_Header::Admin_Header"></nav>
+                                                                                    <!-- END: Header-->
+
+
+                                                                                    <!-- BEGIN: Main Menu-->
+                                                                                    <div th:insert="Fragmentos/Generales/Admin_MainMenu::Admin_MainMenu"> </div>
+                                                                                    <!-- END: Main Menu-->
+
+                                                                                    <!-- BEGIN: Content-->
+                                                                                    <div class="app-content content">
+                                                                                        <div class="content-overlay"></div>
+                                                                                        <div class="content-wrapper">
+                                                                                            <div class="content-header row">
+                                                                                                <div class="content-header-left col-12 mb-2 mt-1">
+                                                                                                    <div class="row breadcrumbs-top">
+                                                                                                        <div class="col-12">
+                                                                                                            <h5 class="content-header-title float-left pr-1 mb-0">Crear Autor</h5>
+                                                                                                            <div class="breadcrumb-wrapper col-12">
+                                                                                                                <ol class="breadcrumb p-0 mb-0">
+                                                                                                                    <li class="breadcrumb-item"><a href="index.html"><i class="bx bx-home-alt"></i></a>
+                                                                                                                    </li>
+                                                                                                                    <li class="breadcrumb-item"><a href="#">Inicio</a>
+                                                                                                                    </li>
+                                                                                                                    <li class="breadcrumb-item active"><a href="#">Crear Autor</a>
+                                                                                                                    </li>
+                                                                                                                </ol>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="content-body">
+
+                                                                                                <!-- Basic Vertical form layout section start -->
+                                                                                                <section id="basic-vertical-layouts">
+                                                                                                    <div class="row match-height">
+                                                                                                        <div class="col-md-12 col-12">
+                                                                                                            <div class="card">
+                                                                                                                <div class="card-header justify-content-center">
+
+                                                                                                                </div>
+                                                                                                                <div class="card-content">
+                                                                                                                    <div class="card-body">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col-md-4">
+                                                                                                                                <h4 class="card-title">Registrar Libro</h4>
+                                                                                                                                <form  th:action="@{/saveBook}" th:object="${Libro}"  method="post" class="form form-vertical">
+                                                                                                                                    <div class="form-body">
+                                                                                                                                        <div class="row">
+                                                                                                                                            <div class="col-12">
+                                                                                                                                                <div class="col-md-6">
+                                                                                                                                                    <div class="form-group">
+                                                                                                                                                        <label for="first-name-icon">ISBN</label>
+                                                                                                                                                        <div class="position-relative has-icon-left">
+                                                                                                                                                            <input type="text" th:field="${*codigo}" id="codigo" class="form-control" disabled="" name="fname-icon" placeholder="ID">
+                                                                                                                                                                <div class="form-control-position">
+                                                                                                                                                                    <i class="bx bx-user"></i>
+                                                                                                                                                                </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="col-6">
+                                                                                                                                                    <div class="form-group">
+                                                                                                                                                        <label for="txtApellidosAutor">Nombre</label>
+                                                                                                                                                        <div class="position-relative has-icon-left">
+                                                                                                                                                            <input type="text" th:field="*{nombre}" id="txtApellidosAutor" class="form-control" name="nombre" placeholder="Nombre del libro">
+                                                                                                                                                                <div class="form-control-position">
+                                                                                                                                                                    <i class="bx bx-user"></i>
+                                                                                                                                                                </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+
+                                                                                                                                            </div>
+                                                                                                                                            <div class="row">
+                                                                                                                                                <div class="col-md-6">
+                                                                                                                                                    <div class="form-group">
+                                                                                                                                                        <label for="first-name-icon">Categoria</label>
+                                                                                                                                                        <div class="position-relative has-icon-left">
+                                                                                                                                                            <select class="form-control" name="categoria" id="selectCategoria">
+                                                                                                                                                                <option value="Drama">Drama</option>
+                                                                                                                                                                <option value="Romance">Romance</option>
+                                                                                                                                                                <option value="Ficción">Ficción</option>
+                                                                                                                                                                <option value="Suspenso">Suspenso</option>
+                                                                                                                                                                <option value="Thriller">Thriller</option>
+                                                                                                                                                            </select>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="col-6">
+                                                                                                                                                    <div class="form-group">
+                                                                                                                                                        <label for="txtApellidosAutor">Fecha de lanzamiento</label>
+                                                                                                                                                        <div class="position-relative has-icon-left">
+                                                                                                                                                            <input type="text" th:field="*{fechapublicacion}" id="txtFechaPublicacion" class="form-control" name="fechapublicacion" placeholder="Apellidos">
+                                                                                                                                                                <div class="form-control-position">
+                                                                                                                                                                    <i class="bx bx-user"></i>
+                                                                                                                                                                </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+
+                                                                                                                                            <div class="col-12 d-flex justify-content-end">
+                                                                                                                                                <button type="submit" class="btn btn-primary mr-1 mb-1"><i class="bx bx-save"></i> Registrar</button>
+                                                                                                                                                <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Cancelar</button>
+                                                                                                                                            </div>
+
+
+
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </form>   
+                                                                                                                            </div> 
+                                                                                                                        </div>
+
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </section>
+                                                                                                <!-- // Basic Vertical form layout section end -->
+
+
+
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- END: Content-->
+
+                                                                                    <!-- demo chat-->
+
+                                                                                    <!-- widget chat demo ends -->
+
+                                                                                    </div>
+                                                                                    <div class="sidenav-overlay"></div>
+                                                                                    <div class="drag-target"></div>
+
+                                                                                    <!-- BEGIN: Footer-->
+                                                                                    <footer th:insert="Fragmentos/Generales/Admin_Header::Admin_Footer"></footer>
+                                                                                    <!-- END: Footer-->
+
+
+                                                                                    <!-- BEGIN: Vendor JS-->
+                                                                                    <script th:src="@{/app-assets/vendors/js/vendors.min.js}" src="../../../app-assets/vendors/js/vendors.min.js"></script>
+                                                                                    <script th:src="@{/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js}" src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+                                                                                    <script th:src="@{/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js}" src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+                                                                                    <script th:src="@{/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js}" src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+                                                                                    <!-- BEGIN Vendor JS-->
+
+                                                                                    <!-- BEGIN: Page Vendor JS-->
+                                                                                    <script th:src="@{/app-assets/vendors/js/ui/jquery.sticky.js}" src="../../../app-assets/vendors/js/ui/jquery.sticky.js"></script>
+                                                                                    <!-- END: Page Vendor JS-->
+
+                                                                                    <!-- BEGIN: Theme JS-->
+                                                                                    <script th:src="@{/app-assets/js/scripts/configs/horizontal-menu.js}" src="../../../app-assets/js/scripts/configs/horizontal-menu.js"></script>
+                                                                                    <script th:src="@{/app-assets/js/core/app-menu.js}" src="../../../app-assets/js/core/app-menu.js"></script>
+                                                                                    <script th:src="@{/app-assets/js/core/app.js}" src="../../../app-assets/js/core/app.js"></script>
+                                                                                    <script th:src="@{/app-assets/js/scripts/components.js}" src="../../../app-assets/js/scripts/components.js"></script>
+                                                                                    <script th:src="@{/app-assets/js/scripts/footer.js}" src="../../../app-assets/js/scripts/footer.js"></script>
+                                                                                    <!-- END: Theme JS-->
+
+                                                                                    <!-- BEGIN: Page JS-->
+                                                                                    <!-- END: Page JS-->
+
+                                                                                </body>
+                                                                                <!-- END: Body-->
+
+                                                                                </html>
